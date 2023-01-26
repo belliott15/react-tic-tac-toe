@@ -1,9 +1,10 @@
 import React, { createContext, useContext, useState } from 'react';
+import boardData from '../ttt-data.js';
 
 const GameContext = createContext();
 
 function GameProvider({ children }) {
-  const [board, setBoard] = useState([]);
+  const [board, setBoard] = useState(boardData);
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [active, setActive] = useState(true);
   const [gameMessage, setGameMessage] = useState('');
