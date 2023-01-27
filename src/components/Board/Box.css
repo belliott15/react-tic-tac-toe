@@ -5,11 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2em;
-}
-
-.innerBox {
-  border: solid b double;
-  background: white;
-  height: 100px;
+  border-radius: 1em;
+  color: hotpink;
+  font-size: 3em;
 }

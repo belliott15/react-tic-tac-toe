@@ -9,9 +9,10 @@ function GameProvider({ children }) {
   const [active, setActive] = useState(true);
   const [gameMessage, setGameMessage] = useState('');
 
-  const handleClick = (content) => {
+  const handleClick = (space, content) => {
     if (content === 'X' || content === 'O') return;
     if (!active) return;
+    board[space - 1] = { space: space, content: currentPlayer };
     if (currentPlayer === 'X') {
       setCurrentPlayer('O');
     } else if (currentPlayer === 'O') {

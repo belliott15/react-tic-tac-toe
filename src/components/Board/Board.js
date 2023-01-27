@@ -7,8 +7,8 @@ export default function Board() {
   const { board } = useGameContext();
   return (
     <section className="gameBoard">
-      {board.map((box) => (
-        <Box key={box.id} {...{ box }} />
+      {board.map((box, i) => (
+        <Box key={i} {...{ box }} />
       ))}
     </section>
   );
