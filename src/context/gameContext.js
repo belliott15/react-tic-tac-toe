@@ -6,11 +6,17 @@ const GameContext = createContext();
 function GameProvider({ children }) {
   const [board, setBoard] = useState(boardData);
   const [currentPlayer, setCurrentPlayer] = useState('X');
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
   const [gameMessage, setGameMessage] = useState('');
 
-  const handleClick = (space) => {
-    console.log('click', space);
+  const handleClick = (content) => {
+    if (content === 'X' || content === 'O') return;
+    if (!active) return;
+    if (currentPlayer === 'X') {
+      setCurrentPlayer('O');
+    } else if (currentPlayer === 'O') {
+      setCurrentPlayer('X');
+    }
   };
 
   const handleReset = () => {

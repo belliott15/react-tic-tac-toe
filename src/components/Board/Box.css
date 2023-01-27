@@ -3,6 +3,8 @@
   background: linear-gradient(120deg, white 5%, lightgreen);
   height: 200px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 2em;
 }
 

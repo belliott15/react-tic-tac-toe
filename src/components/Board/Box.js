@@ -4,8 +4,9 @@ import './Box.css';
 
 export default function Box({ box: { space, content } }) {
   const { handleClick } = useGameContext();
+
   return (
-    <div className="box" onClick={() => handleClick(space)}>
+    <div className="box" onClick={() => handleClick(content)}>
       {content}
     </div>
   );
