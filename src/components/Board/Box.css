@@ -1,7 +1,13 @@
 .box {
-  border: solid black 2px;
-  background: linear-gradient(45deg, green, white, lightgreen);
+  /* border: solid black 2px; */
+  background: linear-gradient(120deg, white 5%, lightgreen);
   height: 200px;
   display: flex;
   border-radius: 2em;
+}
+
+.innerBox {
+  border: solid b double;
+  background: white;
+  height: 100px;
 }

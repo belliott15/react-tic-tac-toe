@@ -6,8 +6,16 @@ const GameContext = createContext();
 function GameProvider({ children }) {
   const [board, setBoard] = useState(boardData);
   const [currentPlayer, setCurrentPlayer] = useState('X');
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const [gameMessage, setGameMessage] = useState('');
+
+  const handleClick = (space) => {
+    console.log('click', space);
+  };
+
+  const handleReset = () => {
+    setActive(true);
+  };
 
   return (
     <GameContext.Provider
@@ -20,6 +28,8 @@ function GameProvider({ children }) {
         setActive,
         gameMessage,
         setGameMessage,
+        handleClick,
+        handleReset,
       }}
     >
       {children}
